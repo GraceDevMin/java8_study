@@ -16,7 +16,7 @@ public class Foo {
     	int baseNumber = 10; //effective final
     	
     	//로컬 클래스 (셰도잉 O)
-    	class LocalClass {
+    	class LocalClass { 
     		void printBaseNumber() {
     			int baseNumber = 11;
     			System.out.println(baseNumber);
