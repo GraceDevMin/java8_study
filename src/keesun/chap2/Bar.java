@@ -1,4 +1,4 @@
-package chap2;
+package keesun.chap2;
 
 public interface Bar{
 

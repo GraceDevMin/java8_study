@@ -1,9 +1,8 @@
-package chap1;
+package keesun.chap1;
 
 import java.util.Arrays;
 import java.util.function.Function;
 import java.util.function.Supplier;
-import java.util.function.UnaryOperator;
 
 public class App {
 

@@ -1,4 +1,4 @@
-package chap1;
+package keesun.chap1;
 
 public class Greeting {
 	

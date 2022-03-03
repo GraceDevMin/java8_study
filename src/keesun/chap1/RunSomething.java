@@ -1,4 +1,4 @@
-package chap1;
+package keesun.chap1;
 
 //추상메서드가 하나만 있으면 함수형 인터페이스
 @FunctionalInterface
