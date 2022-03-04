@@ -8,5 +8,7 @@ public class App {
 		foo.printNameUpperCase();
 		
 		Foo.printAnyString();
+		
+		//git test
 	}
 }
