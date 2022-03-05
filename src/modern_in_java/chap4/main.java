@@ -6,6 +6,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static java.util.stream.Collectors.toList;
+
 public class main {
 
     public static void main(String[] args) {
@@ -22,26 +24,30 @@ public class main {
                 new Dish("salmon", false, 450, Dish.Type.FISH)
         );
 
-        List<String> threeHighCaloricDishNames =
-                menu.stream()
-                        .filter(dish -> dish.getCalories() > 300)
-                        .map(Dish::getName)
-                        .limit(3)
-                        .collect(Collectors.toList());
-        System.out.println(threeHighCaloricDishNames);
+        //Quiz 5-1 Filtering
+        List<Dish> twoMeat = menu.stream()
+                .filter(dish -> dish.getType() == Dish.Type.MEAT)
+                .limit(2)
+                .collect(toList());
 
-        List<String> highCaloricDishes = new ArrayList<>();
-        Iterator<Dish> iterator = menu.iterator();
-        while(iterator.hasNext()) {
-            Dish dish = iterator.next();
-            if(dish.getCalories() > 300) {
-                highCaloricDishes.add(dish.getName());
-            }
-        }
+        //Quiz 5-2 Mapping
 
-        List<String> highCaloricDish = menu.stream().filter(dish -> dish.getCalories() > 300).map(Dish::getName).collect(Collectors.toList());
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5);
+        List<Integer> squares = numbers.stream()
+                .map(number -> number * number)
+                .collect(toList());
 
-        menu.stream().forEach(System.out::println);
+        squares.stream().forEach(System.out::println);
+
+        List<Integer> numbers1 = Arrays.asList(1,2,3);
+        List<Integer> numbers2 = Arrays.asList(3,4);
+        List<int[]> pairs = numbers1.stream()
+                .flatMap(i -> numbers2.stream()
+                        .filter(j -> (i + j) % 3 == 0)
+                        .map(j -> new int[]{i, j})
+                )
+                .collect(toList());
+
     }
 
 }
