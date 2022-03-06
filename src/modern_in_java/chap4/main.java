@@ -1,9 +1,6 @@
 package modern_in_java.chap4;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.toList;
@@ -47,6 +44,15 @@ public class main {
                         .map(j -> new int[]{i, j})
                 )
                 .collect(toList());
+
+        System.out.println("=======================5-3");
+        //Quiz 5-3 reduce
+
+        Optional<Integer> count = menu.stream().map(d -> 1).reduce((a, b) -> (a + b));
+        count.ifPresent(System.out::println);
+
+        long count2 = menu.stream().count();
+        System.out.println(count2);
 
     }
 
