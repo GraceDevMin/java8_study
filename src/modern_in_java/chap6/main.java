@@ -19,7 +19,7 @@ public class main {
                 new Dish("rice", true, 350, Dish.Type.OTHER),
                 new Dish("season fruit", true, 120, Dish.Type.OTHER),
                 new Dish("pizza", true, 550, Dish.Type.OTHER),
-                new Dish("prawns", false, 300, .Dish.Type.FISH),
+                new Dish("prawns", false, 300, Dish.Type.FISH),
                 new Dish("salmon", false, 450, Dish.Type.FISH)
         );
 
